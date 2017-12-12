@@ -19,15 +19,15 @@ describe 'bubble_sort' do
 
   describe 'error handling' do
     it 'throws an error if array is empty' do
-      expect(bubble_sort(array2)).to raise_error ArgumentError
+      expect{ bubble_sort(array2) }.to raise_error ArgumentError
     end
 
     it 'throws an error if array contains non-integers' do
-      expect(bubble_sort(array3)).to raise_error ArgumentError
+      expect{ bubble_sort(array3) }.to raise_error ArgumentError
     end
 
     it 'throws an error if array is not an array' do
-      expect(bubble_sort(array4)).to raise_error ArgumentError
+      expect{ bubble_sort(array4) }.to raise_error ArgumentError
     end
   end
 end

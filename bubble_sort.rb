@@ -1,4 +1,7 @@
 def bubble_sort(array)
+  raise(ArgumentError, 'Array must be an array') unless array.class == Array
+  raise(ArgumentError, 'Array must not be empty') if array.empty?
+  raise(ArgumentError, 'Array must only contain integers') unless array.all? {|el| el.class == Integer}
   loop do 
     changed = false
     array.each_with_index do |el, index|
@@ -14,4 +17,3 @@ def bubble_sort(array)
   array
 end
 
-p bubble_sort([1,3,2])
