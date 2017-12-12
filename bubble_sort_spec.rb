@@ -8,6 +8,11 @@ describe 'bubble_sort' do
     it 'returns an array' do
       expect(bubble_sort(array1)).to be_a Array
     end
+
+    it 'sorts from least to greatest' do
+      expect(bubble_sort(array1)).to eq [1,2,2,3,4,5,6]
+    end
   end
+
 
 end
